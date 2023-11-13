@@ -41,4 +41,9 @@ resource "aws_eks_node_group" "example" {
     aws_iam_role_policy_attachment.node_group_AmazonEC2RoleforSSM,
     aws_iam_role_policy_attachment.node_group_AmazonEKS_CNI_Policy,
   ]
+
+  timeouts {
+    create = "7m"
+    update = "7m"
+  }
 }
