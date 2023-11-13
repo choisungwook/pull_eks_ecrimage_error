@@ -78,10 +78,10 @@ module "eks" {
       capacity_type   = "SPOT",
       release_version = "1.27.1-20230513"
       disk_size       = 20
-      desired_size    = 2,
-      max_size        = 2,
-      min_size        = 2
+      desired_size    = 1,
+      max_size        = 1,
+      min_size        = 1
     }
   }
-  aws_auth_admin_roles = ["arn:aws:iam::467606240901:role/eks-admin-role"]
+  aws_auth_admin_roles = []
 }
