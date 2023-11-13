@@ -50,8 +50,8 @@ resource "aws_vpc_endpoint" "s3" {
         Principal = "*"
         Action    = "s3:*"
         Resource = [
-          "arn:aws:s3:::akbun*",
-          "arn:aws:s3:::akbun/*"
+          "arn:aws:s3:::akbun*", # 의미없는 s3값(실제 사용하지 않음)
+          "arn:aws:s3:::akbun/*" # 의미없는 s3값(실제 사용하지 않음)
         ]
       }
     ]
