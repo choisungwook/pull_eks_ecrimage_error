@@ -17,6 +17,16 @@ terraform init
 terraform apply
 ```
 
+# 디버깅 방법
+* terraform apply timeout발생 이후(또는 Managed nodegroup 생성 중) kubectl로 디버깅
+
+```bash
+aws eks update-kubeconfig --region ap-northeast-2 --name eks-from-terraform
+kubectl -n kube-system get pods
+```
+
+![](./imgs/pending.png)
+
 
 # 삭제 방법
 
